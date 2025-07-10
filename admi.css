@@ -1,0 +1,377 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e; /* Dark indigo background */
+            color: #e0e0e0; /* Light gray for general text */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Interface Section - Main Dashboard Area */
+        #interface {
+            padding: 20px;
+            background-color: #16213e; /* Slightly lighter dark indigo for content area */
+            min-height: 100vh; /* Ensure it takes full viewport height */
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); /* Subtle neon glow effect */
+        }
+
+        /* Header Section (interhead) */
+        .interhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3); /* Neon border */
+            margin-bottom: 30px;
+        }
+
+        .inter1 {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between icon and text */
+        }
+
+.inter1 p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0ff; /* Electric blue for Dashboard text */
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7); /* Glow effect */
+    margin: 0;
+}
+
+/* Hamburger Icon */
+.barrs {
+    font-size: 30px;
+    color: #0ff; /* Electric blue */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.barrs:hover {
+color: #8affff; /* Lighter blue on hover */
+}
+
+        /* Navbar (Notifications) */
+        .navbar {
+            background-color: transparent !important; /* Make navbar background transparent */
+            border: none !important; /* Remove navbar border */
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            list-style: none; /* Remove default list style */
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-nav li {
+            margin-left: 25px; /* Space between items */
+        }
+
+        /* Bell Icon */
+        .fa-bell {
+            font-size: 27px;
+            color: #0ff; /* Electric blue */
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .fa-bell:hover {
+            transform: scale(1.1);
+        }
+
+        /* Notification Count */
+        .round {
+            background-color: #ff007f; /* Fuchsia/bright pink for notification count */
+            color: #fff;
+            border-radius: 50%;
+            padding: 3px 8px;
+            font-size: 14px;
+            position: relative;
+            top: -10px;
+            left: -10px;
+            z-index: 1; /* Ensure it's above the bell icon */
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.7); /* Glow effect */
+        }
+
+        /* Notification Dropdown List */
+        #list {
+            position: absolute;
+            top: 60px; /* Adjust as needed */
+            right: 20px;
+            background-color: #2a2a4a; /* Darker background for the dropdown */
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            border-radius: 8px;
+            width: 350px; /* Adjust width as needed */
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            display: none; /* Hidden by default, toggled by JS */
+            z-index: 1000; /* Ensure it's on top of other content */
+            padding: 15px;
+        }
+
+        #list h6 {
+            color: #8affff; /* Lighter blue for informative text */
+            margin-bottom: 15px;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        #list #message_items {
+            list-style: none; /* Remove list bullet */
+            margin-bottom: 10px;
+        }
+
+        .message {
+            background-color: #3e2060; /* Dark purple for notifications */
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(138, 43, 226, 0.5); /* Purple border */
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .message:hover {
+            background-color: #4b2a75; /* Slightly lighter purple on hover */
+        }
+
+        .message.alert-warning {
+            background-color: #4a3000; /* Darker orange for warning alerts */
+            border-color: #ffa500; /* Orange border */
+        }
+
+        .message.alert-danger {
+            background-color: #4a0000; /* Darker red for danger alerts */
+            border-color: #ff4500; /* Red-orange border */
+        }
+
+        .noti {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .noti span {
+            color: #0ff; /* Electric blue for notification name */
+            font-weight: bold;
+        }
+
+        .noti .date {
+            color: #a0a0a0; /* Gray for dates */
+        }
+
+        .msg p {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin: 0;
+        }
+
+        /* Welcome Header */
+        .in-name {
+            font-size: 32px;
+            color: #8affff; /* Lighter blue for welcome message */
+            margin-bottom: 40px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Value Boxes (Total Users, Pending, Events, Revenue) */
+        .values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .box {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
+        }
+
+        .val-box {
+            background-color: #1d264a; /* Darker blue for value boxes */
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.15); /* Subtle glow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes total to bottom, span to top */
+            min-height: 150px; /* Ensure consistent height */
+        }
+
+        .val-box:hover {
+            transform: translateY(-8px); /* Lift effect on hover */
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4); /* More prominent glow on hover */
+        }
+
+        .val-box span {
+            font-size: 18px;
+            color: #e0e0e0; /* Light gray for title */
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .val-box .total {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: auto; /* Push to bottom */
+        }
+
+        .val-box .total svg, .val-box .total .fa-coins {
+            width: 35px;
+            height: 35px;
+            color: #0ff; /* Electric blue for icons */
+            min-width: 35px; /* Prevent shrinking */
+        }
+
+        .val-box .total h3 {
+            font-size: 36px;
+            color: #fff; /* White for numbers */
+            margin: 0;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+
+        .val-box p {
+            font-size: 13px;
+            color: #a0a0a0; /* Gray for description */
+            margin-top: 10px;
+        }
+
+        /* User Table */
+        .table {
+            background-color: #1d264a; /* Same as value boxes for consistency */
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+            overflow-x: auto; /* Enable horizontal scrolling for small screens */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #e0e0e0; /* Light gray for table text */
+        }
+
+        table thead th {
+            background-color: #0f4c75; /* Darker blue for table header */
+            color: #fff;
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #0ff; /* Neon border for header */
+        }
+
+        table tbody td {
+            padding: 12px 10px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1); /* Subtle border */
+            white-space: nowrap; /* Prevent text wrapping in cells */
+        }
+
+        table tbody tr:hover {
+            background-color: #2a3a60; /* Slightly lighter blue on row hover */
+        }
+
+        /* Profile Image in Table */
+        .pp-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #0ff; /* Electric blue border for profile pics */
+        }
+
+        /* Action Buttons (Edit, Block) */
+        .ed, .de {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .ed {
+            background-color: #0ff; /* Electric blue for Edit */
+            color: #1a1a2e; /* Dark text on blue */
+            margin-right: 5px;
+        }
+
+        .ed:hover {
+            background-color: #8affff; /* Lighter blue on hover */
+            color: #1a1a2e;
+        }
+
+        .de {
+            background-color: #ff007f; /* Fuchsia for Block */
+            color: #fff;
+        }
+
+        .de:hover {
+            background-color: #ff4da6; /* Lighter fuchsia on hover */
+            color: #fff;
+        }
+
+        /* Capitalized cells from PHP */
+        .caps {
+            text-transform: capitalize;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .interhead {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .navbar-nav {
+                margin-top: 15px;
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            .navbar-nav li {
+                margin-left: 15px;
+            }
+
+            #list {
+                right: 10px;
+                width: 95%; /* Make dropdown wider on small screens */
+            }
+
+            .values {
+                grid-template-columns: 1fr; /* Stack boxes on small screens */
+            }
+        }
+
+        /* Custom classes for the sidebar toggle */
+        /* Assuming 'menu' is the ID of your sidebar */
+        #menu.is-close {
+            /* Styles for when the sidebar is closed */
+            width: 0;
+            transform: translateX(-100%);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #interface.is-close {
+            /* Styles for the main interface when sidebar is closed (e.g., expand) */
+            margin-left: 0; /* Remove margin if sidebar is hidden */
+            width: 100%; /* Take full width */
+            transition: all 0.3s ease-in-out;
+        }
+
+        #menu.is-clos { /* Typo in your JS: 'is-clos' instead of 'is-close' */
+            /* This class is for when the menu is active/open (based on your JS logic) */
+            width: 250px; /* Example default width */
+            transform: translateX(0);
+            transition: all 0.3s ease-in-out;
+        }

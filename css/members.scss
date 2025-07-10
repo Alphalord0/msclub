@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    background: rgb(226, 224, 224);
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    transition: 0.2s ease-in;
+    color: rgb(24, 24, 24);
+}
+#menu{
+    background: #111827;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#menu .logo{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0 0 30px;
+    cursor: default;
+}
+#menu .logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#menu .items {
+    margin-top: 40px;
+}
+
+
+#menu .items .tab:hover,
+#menu .log:hover {
+    cursor: pointer;
+    background: #253047;
+}
+
+.active, #men .items .tab:hover{
+    border-left: 4px solid white;
+}
+
+#menu .items .tab i,
+#menu .log i{
+    color: rgba(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items .tab:hover i,
+#menu .items .tab:hover,
+#menu .log:hover i,
+#menu .log:hover .out{
+    color: #F3F4F6;
+}
+
+#menu .out{
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+#menu .log{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#menu .log i{
+    color: rgb(134, 141, 151);
+}
+
+#menu .items .tab,
+#menu .log .out{
+    text-decoration: none;
+    color: rgb(134, 141, 151);
+    font-weight: 300;
+    transition: 0.3s ease;
+    padding: 15px 0;
+    display: flex;
+    width: 100%;
+}
+
+
+#interface{
+    width: 100%;
+    margin-left: 300px;
+    position: relative;
+}
+
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #594ef7;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+#interface .navigation .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+}
+
+#interface .navigation .search i {
+    margin-right: 14px;
+}
+
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+#interface .navigation .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interface .navigation .profile .user-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 5px 15px;
+    gap: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(216, 215, 215);
+    cursor: pointer;
+    border: none;
+}
+
+#interface .navigation .profile i {
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#interface .navigation .profile img {
+    width:30px;
+    height:30px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+ }
+
+.i-name {
+    color: #444a53;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+.ppic{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+tbody tr,
+thead tr{
+    border-radius: 12px;
+}
+thead{
+    background-color: white;
+    padding: 12px;
+}
+
+td, th {
+text-align: left;
+padding: 8px;
+}
+th{
+    cursor: default;
+}
+
+tr:nth-child(even) {
+background-color: #b4b4b4;
+}
+
+tr .del {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 12px 5px;
+    text-decoration: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+tr .edi{
+    background-color: green;
+    color: white;
+    padding: 12px 5px;
+    text-decoration: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+tr .role{
+    text-transform: capitalize;
+}
+
+td h1{
+    font-size: 18px;
+    font-family: sans-serif;
+}
+td p{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.app-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dark {
+    background-color: rgb(0, 6, 32);
+    color: azure;
+
+    #interface .navigation{
+        background: rgb(0, 6, 32);
+    }
+    #interface .navigation .search{
+        border: 1px solid rgb(44, 44, 44);
+    }
+    #interface .navigation input{
+        background: transparent;
+        color: white;
+    }
+    ::placeholder{
+        color: white;
+    }
+    #interface .navigation .user-name{
+        background-color: transparent;
+        color: white;
+        box-shadow: none;
+        border: 1px solid white;
+    }
+    .val-box{
+        background: transparent;
+        border: 1px solid white;
+    }
+    .values a{
+        text-decoration: none;
+        color: white;
+    }
+
+    table thead{
+        border: 1px solid white;
+        border-bottom: none;
+        background: black;
+    }
+    .i-name {
+        color: #cccccc;
+        padding: 30px 30px 0 30px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cccccc;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+  
+  .dropdown-content button, .edi{
+    color: black;
+    background-color: white;
+    padding: 5px 16px;
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-content button:hover, .edi:hover{
+    background-color: gray;
+    
+  }
+.show {display: block;}
